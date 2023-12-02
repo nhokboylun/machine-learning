@@ -5,11 +5,11 @@ from MissingValueEstimation import performEM;
 
 # Project 1
 datasets1 = [
-    ('./data/TrainData1.txt', './data/TrainLabel1.txt', './data/TestData1.txt', './data/TestLabel1.txt'),
-    ('./data/TrainData2.txt', './data/TrainLabel2.txt', './data/TestData2.txt', './data/TestLabel2.txt'),
-    ('./data/TrainData3.txt', './data/TrainLabel3.txt', './data/TestData3.txt', './data/TestLabel3.txt'),
-    ('./data/TrainData4.txt', './data/TrainLabel4.txt', './data/TestData4.txt', './data/TestLabel4.txt'),
-    ('./data/TrainData5.txt', './data/TrainLabel5.txt', './data/TestData5.txt', './data/TestLabel5.txt')
+    ('./data/TrainData1.txt', './data/TrainLabel1.txt', './data/TestData1.txt', './NguyenClassification1.txt'),
+    ('./data/TrainData2.txt', './data/TrainLabel2.txt', './data/TestData2.txt', './NguyenClassification2.txt'),
+    ('./data/TrainData3.txt', './data/TrainLabel3.txt', './data/TestData3.txt', './NguyenClassification3.txt'),
+    ('./data/TrainData4.txt', './data/TrainLabel4.txt', './data/TestData4.txt', './NguyenClassification4.txt'),
+    ('./data/TrainData5.txt', './data/TrainLabel5.txt', './data/TestData5.txt', './NguyenClassification5.txt')
 ]
 
 for train_data_path, train_label_path, test_data_path, test_label_path in datasets1:
@@ -22,9 +22,9 @@ for train_data_path, train_label_path, test_data_path, test_label_path in datase
 
 # Project 2
 datasets2 = [
-  ('./data/MissingData1.txt','./data/MissingData1_filled.txt'),
-  ('./data/MissingData2.txt','./data/MissingData2_filled.txt'),
-  ('./data/MissingData3.txt','./data/MissingData3_filled.txt')
+  ('./data/MissingData1.txt','./NguyenMissingResult1.txt'),
+  ('./data/MissingData2.txt','./NguyenMissingResult2.txt'),
+  ('./data/MissingData3.txt','./NguyenMissingResult3.txt')
   ]
 
 for missing_data_path, filled_data_path in datasets2:

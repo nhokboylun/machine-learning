@@ -62,6 +62,23 @@ def performLogisticRegression(X, Y):
     pipeline.fit(X, Y)
     return pipeline
 
+def performPCASVC(X, Y):
+  pca = PCA(n_components=0.95)
+  classifier = SVC(kernel='rbf')
+
+  pipeline = Pipeline([
+      ('pca', pca),
+      ('svc', classifier)
+  ])
+
+  pipeline.fit(X, Y)
+  return pipeline
+
+def performRandomForest(X, Y):
+    classifier = RandomForestClassifier()
+    classifier.fit(X, Y)
+    return classifier
+
 def performDecisionTree(X, Y):
     # Create a Decision Tree Classifier
     clf = DecisionTreeClassifier(random_state=42)
@@ -122,23 +139,6 @@ def performNaiveBayes(X, Y):
 
     # Return the pipeline with the trained Naive Bayes classifier
     return pipeline
-
-def performPCASVC(X, Y):
-  pca = PCA(n_components=0.95)
-  classifier = SVC(kernel='rbf')
-
-  pipeline = Pipeline([
-      ('pca', pca),
-      ('svc', classifier)
-  ])
-
-  pipeline.fit(X, Y)
-  return pipeline
-
-def performRandomForest(X, Y):
-    classifier = RandomForestClassifier()
-    classifier.fit(X, Y)
-    return classifier
 
 def performSVM(X, Y):
     # Splitting the dataset into training and validation sets
